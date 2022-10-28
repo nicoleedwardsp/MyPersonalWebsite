@@ -1,0 +1,39 @@
+h1{
+    font-family:sans-serif;
+    text-align:center;
+    color:black;
+    text-decoration:solid;
+    font-size: 60px;
+    margin-bottom: 1%;
+}
+
+ul{
+    font-family: sans-serif;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+li{
+    float:left;
+}
+li a{
+    display:inline-block;
+    color:black;
+    text-align:center;
+    padding:20px;
+    text-decoration:none;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+li a:hover {
+    background-color: none;
+    }
+
+.footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 30px;
+    font-family: sans-serif;
+}

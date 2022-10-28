@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">>
+    <style>
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align:center;
+            color:darkmagenta
+        }
+        
+        ul{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:purple;
+        }
+        li{
+            float:left;
+        }
+        li a, .dropbtn{
+            display:inline-block;
+            color:white;
+            text-align:center;
+            padding:20px;
+            text-decoration: none;
+        }
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: hotpink;
+            }
+        li.dropdown {
+            display: inline-block;
+            }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(255, 248, 249);
+            z-index: 1;
+            }
+         .dropdown-content a {
+            color: black;
+            padding: 20px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+         .dropdown-content a:hover {
+            background-color: rgb(252, 216, 221);
+            }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            }
+
+        h2{
+            color:hotpink;
+            text-align:left;
+            font-family: 'Bebas Neue';
+        }
+        .paragraph{
+            font: size 1.2em;
+            color:rgb(163, 0, 79);
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-indent: 30px;
+        }
+        img{
+            float:left;
+            margin: 20px;
+            height: 200px;
+        }
+        body{
+            background-color: rgb(238, 253, 251);
+            margin-left:120px;
+            margin-right:120px;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        hr{
+            border: 5px dotted skyblue;
+        }
+
+        /*Learned how to create and style a Skillbar using CSS. I learned how to do this using W3 schools online. Even though I did not use any new tags, I learned new ways in which I can use classes and divions. Very helpful information!*/
+
+        .container{
+            width:100%;
+            background-color: lightgrey;
+        }
+        .proficiency{
+            text-align:right;
+            padding-top:10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            color:white;
+        }
+        .german{
+            width:90%; 
+            background-color: lightgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>All About Nicole</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="https://github.com/nicoleedwardsp/WebTech">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/nicoleedwards1/">LinkedIn</a></li>
+        <li><a href="mailto:nedwards1@babson.edu">Email</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Homework 2</a>
+            <div class="dropdown-content">
+                <a href="hw2-1.html">hw2-1</a>
+                <a href="hw2-2.html">hw2-2</a>
+                <a href="hw2-3.html">hw2-3</a>
+                <a href="hw2-w3schools.html">hw2-w3schools</a>
+              </div>
+        </li>
+    </ul>
+    <p>Quick Links:
+        <br>
+        <a href="#about">About Me</a>
+        <br>
+        <a href="#interests">My Interests</a>
+    </p>
+    <hr>
+    <h2 id="about">About Me</h2>
+        <p class="paragraph">Hey, there! My name is Nicole Edwards and I am a senior at Babson College from Guatemala City. I was raised in an English/Spanish bilingual household, and I went to a German school all of my life, which is why I speak 3 languages. I have a very bubbly personality and love meeting new people, as I believe that I can learn something from anybody I cross paths with.
+            <br>
+            <img src="images/nicole_babson.jpg" alt="Nicole in Babson" title="photo of Nicole at Babson"/>
+        </p>
+        <p class="paragraph">I decided to study at <a href="https://www.babson.edu/">Babson College</a>, because I am passionate about Entrepreneurship, and that's what Babson is great at. I would like to start my own business one day, so being exposed to the best entrepeneurship education in the world taught top-notch faculty is what drove me to Babson. Addtionally, Babson has a large population of international students, which is important to me considering my multicultural background. Finally, Babson is located near the amazing city of Boston, which is a hotspot for the brightest people working in the newest developments across a wide range of industries. What I plan to do after graduation is to start a career in Consulting or Marketing. Hopefully later during my career, I can be an entrepreneur myself... and be able to travel the world!
+        </p>
+    <h3>My German language profieciency level</h6>
+        <div class="container">
+            <div class="german proficiency">90%</div>
+            <!--Learned that divions can have text in it. Also learned that I can put two or more classes to one element. This is used to create "Skillbars", as I learned on W3 schools.-->
+        </div>
+
+    <h2 id="interests">My Interests</h2>
+        <p class="paragraph">One of the things I like to do the most in this world is traveling. I enjoy getting to know new places, people, cultures, languages, foods, etc. So far, I have been to over 25 countries, speak 3 languages and have lived in 4 countries. My favorite tool to learn a new language is <a href="https://www.duolingo.com/">Duolingo</a>, whose founder is from Guatemla, just like me.
+            <br>
+            <img src="images/mochilera.jpg" alt="Nicole Travel" title="photo of Nicole traveling"/> 
+            
+        </p>
+    <hr>
+    <div>
+        <a href="sitemap.html">Sitemap</a>
+    </div>
+
+</body>
+</html>
