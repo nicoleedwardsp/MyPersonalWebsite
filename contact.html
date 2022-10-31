@@ -13,6 +13,30 @@
             text-align: center;
             text-transform: uppercase;
         }
+        body{
+            font-family: sans-serif
+        }
+        img{
+            padding: 10px;
+        }
+        a{
+            color:white;
+            text-decoration:none;
+        }
+        button{
+            border:none;
+            background-color: black;
+            color:white;
+            text-align:center;
+            font-family: sans-serif;
+            padding: 14px 28px;
+        }
+        table{
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
     </style>
 </head>
 <body>
@@ -23,9 +47,101 @@
         <li><a href="artists.html">Our Artists</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
         </li>
     </ul>
     <h2>Contact</h2>
-    <a href="mailto:nedwards1@babson.edu">Email</a>
+    <table>
+        <tr>
+            <td>
+                <img src="images/art12.jpg" alt="antigua-art" title="antigua-art" height="300">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="contact-button"><a href="mailto:nedwards1@babson.edu">Email</a></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Feedback Form</h2>
+            </td>
+        </tr>
+    </table>
+
+    <form action="https://oim-apis.herokuapp.com/form" method="post">
+        <fieldset>
+            <legend><strong>Your information:</strong></legend>
+            <br>
+            <label for="input-name">Name:</label>
+                <input
+                    type="text"
+                    placeholder="Enter your name here"
+                    size="30"
+                    id="input-name"
+                    name="name"
+                        />
+            <br>
+            <label for="input-email">Email:</label>
+                <input
+                    type="email"
+                    placeholder="Enter your email here"
+                    size="30"
+                    id="input-email"
+                    name="name"
+                    />
+            <br>
+            <div>
+                <label for="select-country">Country</label>
+                <input list="country-list" id="select-country" name="select-country">
+                <datalist id="country-list">
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="USA">USA</option>
+                    <option value="Germany">Germany</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    </datalist>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><strong>Your review:</strong></legend>
+            <br>
+            <div>
+                What do you think of De Kunst's website?
+                <label><input type="radio" name="opinion" value="great">I love it</label>
+                <label><input type="radio" name="opinion" value="awesome">Neutral</label>
+                <label><input type="radio" name="opinion" value="Good">Could be better</label>
+            </div>
+            <br>
+            <div>
+                <div>
+                    <label for="comments">Suggestions of what you'd like to see:</label>
+                </div>
+                <div>
+                    <textarea
+                    id="comments"
+                    name="comments"
+                    rows="5"
+                    cols="25"></textarea>
+                </div>
+            </div>
+            <div>
+                <br>
+                <label><input type="checkbox" name="updates" value="updates" checked>Sign me up for email updates</label>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </fieldset>
+    </form>
+
+
+    <footer class="footer">
+        <p>&copy; dekunst.org 2022</p>
+    </footer>
+
 </body>
 </html>

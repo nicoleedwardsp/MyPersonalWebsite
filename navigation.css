@@ -5,6 +5,7 @@ h1{
     text-decoration:solid;
     font-size: 60px;
     margin-bottom: 1%;
+    background-size: cover;
 }
 
 ul{

@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Kunst</title>
     <link rel="stylesheet" href="navigation.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <style>
 
+        /*
         .main-content{
             size: 100%;
             background-image:url(images/art1.jpg);
@@ -19,17 +21,41 @@
             background-repeat: no-repeat;
             background-size: 100%;
         }
+        */
 
         img{
             text-align: center;
-            size: 100%;
+            display:block;
+            margin-bottom:0;
         }
 
         h2{
-            font-size: 50px;
+            font-size: 100px;
             color:white;
-            text-align: right;
+            text-align: center;
             margin: 10px;
+            position: relative; 
+            top: -600px; 
+            display:block;
+            margin-bottom:30px;
+        }
+        button{
+            border:none;
+            background-color: black;
+            color:white;
+            text-align:center;
+            font-family: sans-serif;
+            padding: 14px 28px;
+            position: relative; 
+            top: -600px; 
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:30px;
+        }
+        a{
+            text-decoration:none;
+            color:white;
         }
 
     </style>
@@ -42,28 +68,24 @@
         <li><a href="artists.html">Our Artists</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
         </li>
     </ul>
 
     <div class="main-content">
-        <br>
+        <img src="images/homepic.jpg" alt="Anabella Edwards - Bad" title="Anabella Edwards - Bad" width="100%">
+        
         <h2>art that sets you <br>
             ap<em>art</em></h2>
-            <br>
-        <h2>an international community</h2>
-        <br>
 
-        <p>Explore our Collection</p>
-        <p>Meet the Artists</p>
-        <br>
+        <button><a href="art.html">Explore our Collection</a></button>
+        <button><a href="artists.html">Meet the Artists</a></button>
+
     </div>
 
-    
-
-
-    <div class="footer">
+    <footer class="footer">
         <p>&copy; dekunst.org 2022</p>
-    </div>
+    </footer>
 
 </body>
 </html>
