@@ -35,10 +35,31 @@
             font-family: sans-serif;
             padding: 14px 28px;
         }
+        button:hover{
+            background-color:#266d90;
+        }
         table{
             text-align:center;
             margin-left:auto;
             margin-right:auto;
+        }
+        form{
+            width: 70%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        #announcement {
+        position: absolute;
+        color: white;
+        font-family: Arial;
+        text-transform: uppercase;
+        }
+        .banner {
+            position: relative;
+            height: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: #ff006a;
         }
 
     </style>
@@ -51,14 +72,18 @@
         <li><a href="artists.html">Our Artists</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="sitemap.html">Sitemap</a></li>
         </li>
     </ul>
     <h2>Contact</h2>
+    <div class="banner">
+        <h3 id="announcement">This text will move</h3>
+    </div>
     <table>
         <tr>
             <td>
-                <img src="images/art12.jpg" alt="antigua-art" title="antigua-art" width="90%">
+                <img src="images/art12.jpg" alt="museum-art" title="antigua-art" width="70%">
             </td>
         </tr>
         <tr>
@@ -73,12 +98,13 @@
         </tr>
     </table>
 
-    <form action="https://oim-apis.herokuapp.com/form" method="post">
+    <form id="contact-form" action="https://oim-apis.herokuapp.com/form" method="post">
         <fieldset>
             <legend><strong>Your information:</strong></legend>
             <br>
             <label for="input-name">Name:</label>
                 <input
+                    id="name"
                     type="text"
                     placeholder="Enter your name here"
                     size="30"
@@ -147,5 +173,48 @@
         <p>&copy; dekunst.org 2022</p>
     </footer>
 
+    <script>
+    // 1. Announcement
+      const ANNOUNCEMENT = [
+        "Visit Anabella's Exposition",
+        "'Epiphany'",
+        "Le Rendez Vous Guatemala",
+        "Nov 2022 - Jan 2023",
+      ];
+      const announcementEl = document.getElementById("announcement");
+      let p = 5;
+      let index = 0;
+
+      function move() {
+        console.log("...starting function to move announcement...");
+        announcementEl.innerHTML = ANNOUNCEMENT[index];
+        announcementEl.style.left = p + "px";
+        if (p > document.querySelector("div").clientWidth - 350) {
+          p = 5;
+          index++;
+          if (index === ANNOUNCEMENT.length) {
+            index = 0;
+          }
+        } else {
+          p = p + 5;
+        }
+        setTimeout(move, 20);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        move();
+      });
+
+    // 2. Form validation
+    function validation(){
+        console.log("...starting function to validate form...");
+    }
+        if (contact-form["name"].value.length ==0){
+        alert("Please enter your name");
+        }
+
+
+    </script>
+    
 </body>
 </html>

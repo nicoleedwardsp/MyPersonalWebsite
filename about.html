@@ -37,11 +37,22 @@
             font-family: sans-serif;
             text-align: left;
             margin-left:20px;
+            font-size: 20px;
         }
 
         .images-me{
             padding:10px;
             float: center;
+        }
+
+        table{
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button{
+            border: 0px;
+            background-color: white;
         }
 
     </style>
@@ -54,6 +65,7 @@
         <li><a href="artists.html">Our Artists</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="sitemap.html">Sitemap</a></li>
     </ul>
 
@@ -62,21 +74,31 @@
     <div class="main-content">
         <table>
             <tr>
-                <td colspan="2"><img src="images/art3.jpg" alt="Art Inspiration" title="Art Inspiration" height="300"></td>
+                <td colspan="1">
+                    <img src="images/art6.jpg" alt="Nicole x Vermeer" title="Nicole x Vermeer" height="300">
+                </td>
+                <td colspan="1">
+                    <button><img id="sketch" src="images/nicole-sketch1.jpg" alt="Nicole Sketch" title="Nicole Sketch by Michelle Edwards" height="300"></button>
+                </td>
                 <td colspan="3">
-                    <p>
-                     My mame is Nicole Edwards and I am the founder of <strong>De Kunst</strong>. <strong>De Kunst</strong> means <em>"the art"</em> in Dutch. I chose this name, because I spent a semester abraod in the Netherlands and got inspired by the iconic Dutch Art. I was able to appreciate paintings from the greatest artists of all time: Van Gogh, Vermeer, Rembrandt, among others. While analyzing my own background, I realized that I come from a family of artists, and that they are all dealing with the same issue: lack of international exposure. Since I am a business student at Babson College, which is such an international institution, I realized that there is lots I can do to help my family and artists like them to gain the exposure and reputation they deserve. 
-                     <br>
-                    <strong>De Kunst</strong> was born from the strong desire to empower talented artists and give them international exposure. With our strong network of artists, art-enthusiasts, business leaders, investors, and academics, our mission is to connect the artists with someone who values their art.<br>
-                    </p>
+                    <p id="mybio">Click on my avatar to read about me...!</p>
                 </td>
             </tr>
             <tr class="images-me">
-                <td><img src="images/art4.jpg" alt="Nicole x Basquiat" title="Nicole x Basquiat" height="200"></td>
-                <td><img src="images/art6.jpg" alt="Nicole x Vermeer" title="Nicole x Vermeer" height="200"></td>
-                <td><img src="images/art5.jpg" alt="Depot Bojimans van Beuningen" title="Depot Bojimans van Beuningen" height="200"></td>
-                <td><img src="images/art7.jpg" alt="Nicole and Emilio at the Louvre" title="Nicole at the Louvre" height="200"></td>
-                <td><img src="images/art8.jpg" alt="Nicole at JUMEX" title="Nicole at JUMEX" height="200"></td>
+                <td>
+                    <img src="images/art4.jpg" alt="Nicole x Basquiat" title="Nicole x Basquiat" height="200"></td>
+                <td>
+                    <img src="images/art3.jpg" alt="Art Inspiration" title="Art Inspiration" height="200">
+                </td>
+                <td>
+                    <img src="images/art5.jpg" alt="Depot Bojimans van Beuningen" title="Depot Bojimans van Beuningen" height="200">
+                </td>
+                <td>
+                    <img src="images/art7.jpg" alt="Nicole and Emilio at the Louvre" title="Nicole at the Louvre" height="200">
+                </td>
+                <td>
+                    <img src="images/art8.jpg" alt="Nicole at JUMEX" title="Nicole at JUMEX" height="200">
+                </td>
             </tr>
             <tr><td colspan="5"><p>My experience in art comes from the top-notch college course <em>Foundations of Western Art</em>, taught by Prof. Anina Moriarty, as well as from my wonderful journeys around the world. I have traveled to 25 countries, and have visited some of the finest museums around the globe. Some of these include:</p></td></tr>
             <tr><td colspan="2">
@@ -111,6 +133,20 @@
         <p>&copy; dekunst.org 2022</p>
     </footer>
 
+    <script>
+            function f() {
+            console.log("...string function to make my bio appear...");
+            const mybioEl=document.getElementById("mybio");
+            mybioEl.innerText=
+            "My mame is Nicole Edwards and I am the founder of <strong>De Kunst</strong>. <strong>De Kunst</strong> means <em>the art</em> in Dutch. I chose this name, because I spent a semester abraod in the Netherlands and got inspired by the iconic Dutch Art. I was able to appreciate paintings from the greatest artists of all time: Van Gogh, Vermeer, Rembrandt, among others. While analyzing my own background, I realized that I come from a family of artists, and that they are all dealing with the same issue: lack of international exposure. Since I am a business student at Babson College, which is such an international institution, I realized that there is lots I can do to help my family and artists like them to gain the exposure and reputation they deserve.<br><strong>De Kunst</strong> was born from the strong desire to empower talented artists and give them international exposure. With our strong network of artists, art-enthusiasts, business leaders, investors, and academics, our mission is to connect the artists with someone who values their art.<br>";
+            mybioEl.innerHTML=
+            "My mame is Nicole Edwards and I am the founder of <strong>De Kunst</strong>. <strong>De Kunst</strong> means <em>the art</em> in Dutch. I chose this name, because I spent a semester abraod in the Netherlands and got inspired by the iconic Dutch Art. I was able to appreciate paintings from the greatest artists of all time: Van Gogh, Vermeer, Rembrandt, among others. While analyzing my own background, I realized that I come from a family of artists, and that they are all dealing with the same issue: lack of international exposure. Since I am a business student at Babson College, which is such an international institution, I realized that there is lots I can do to help my family and artists like them to gain the exposure and reputation they deserve.<br><strong>De Kunst</strong> was born from the strong desire to empower talented artists and give them international exposure. With our strong network of artists, art-enthusiasts, business leaders, investors, and academics, our mission is to connect the artists with someone who values their art.<br>";
+        }
+        document.querySelector("button").addEventListener
+        ("click", function (){
+            f();
+        })
+    </script>
 
 </body>
 </html>
